@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>图片网格</title>
+<link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+<div class="grid-container">
+
+        <div class="grid-item">
+        <p> 友人么么哒 </p>
+        <img src="data/友人么么哒.jpeg" alt="图片1">
+        </div>
+        <div class="grid-item">
+        <p> 沙雕小道士 </p>
+        <img src="data/沙雕小道士.jpeg" alt="图片1">
+        </div>
+        <div class="grid-item">
+        <p> Space频道 </p>
+        <img src="data/Space频道.jpeg" alt="图片1">
+        </div>
+        <div class="grid-item">
+        <p> OneMicroSpace </p>
+        <img src="data/OneMicroSpace.jpeg" alt="图片1">
+        </div>
+        <div class="grid-item">
+        <p> SpaceXTV </p>
+        <img src="data/SpaceXTV.jpeg" alt="图片1">
+        </div>
+        <div class="grid-item">
+        <p> SpaceX_Channel </p>
+        <img src="data/SpaceX_Channel.jpeg" alt="图片1">
+        </div>
+<script>
+    function updateImages() {
+        const images = document.querySelectorAll('.grid-item img');
+        images.forEach(img => {
+            const timestamp = new Date().getTime();
+            img.src = img.src.split('?')[0] + '?' + timestamp;
+        });
+    }
+
+    // 每秒钟更新一次图片
+    setInterval(updateImages, 2000);
+
+    // 初始加载时也更新一次图片
+    updateImages();
+</script>
+</body>
+</html>

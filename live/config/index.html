@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>图片网格</title>
+<link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+<div class="grid-container">
+<!-- 图片部分 -->
+<script>
+    function updateImages() {
+        const images = document.querySelectorAll('.grid-item img');
+        images.forEach(img => {
+            const timestamp = new Date().getTime();
+            img.src = img.src.split('?')[0] + '?' + timestamp;
+        });
+    }
+
+    // 每秒钟更新一次图片
+    setInterval(updateImages, 2000);
+
+    // 初始加载时也更新一次图片
+    updateImages();
+</script>
+</body>
+</html>
