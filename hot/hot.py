@@ -7,7 +7,7 @@ from playwright.sync_api import sync_playwright
 import time
 import threading
 
-with open(r"C:\Users\gao\Desktop\python\spacex\config\config.json", 'r', encoding='utf-8') as f:
+with open("../config/config.json", 'r', encoding='utf-8') as f:
     conf = json.load(f)
     #douyin_cookie = conf["cookies"]["douyin"]
     #bili_cookie = conf["cookies"]["bili"]
