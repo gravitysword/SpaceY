@@ -57,7 +57,8 @@ def get_dM(rooms_id,rooms_name):
 
 if __name__ == '__main__':
     with open('config/rooms.json', 'r', encoding='utf-8') as f:
-        a = json.load(f)['rooms']
+        a = f.read()
+        a = json.loads(a)['rooms']
     rooms_id = [a[i] for i in a]
     rooms_name = { a[i]: i for i in a }
     while True:
