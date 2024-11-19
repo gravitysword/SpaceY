@@ -1,0 +1,19 @@
+/* 定义网格容器 */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 每行3列，每列等宽 */
+    gap: 10px; /* 网格项之间的间距 */
+    padding: 10px; /* 容器内边距 */
+}
+
+/* 定义网格项 */
+.grid-item {
+    border: 1px solid #ccc; /* 边框 */
+    text-align: center; /* 文本居中 */
+}
+
+/* 图片样式 */
+.grid-item img {
+    max-width: 100%; /* 图片最大宽度为容器宽度 */
+    height: auto; /* 保持图片比例 */
+}
